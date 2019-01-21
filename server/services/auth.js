@@ -63,7 +63,8 @@ function signup({ email, password, req }) {
           resolve(user);
         });
       });
-    });
+    })
+    .catch(err => console.log({err}))
 }
 
 // Logs in a user.  This will invoke the 'local-strategy' defined above in this
